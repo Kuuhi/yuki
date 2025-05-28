@@ -53,7 +53,6 @@ function getRandomLineFromFile(filePath) {
   return lines[randomIndex];
 }
 
-
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
