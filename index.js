@@ -57,9 +57,11 @@ client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
 
   if (message.mentions.users.has(client.user.id)) {
+    const filePath = "example.txt";
+
     message.reply({
       content: getRandomLineFromFile(filePath),
-      allowedMentions: {parse: []}
+      allowedMentions: { parse: [] }
     })
   }
 })
